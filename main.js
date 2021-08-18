@@ -5,31 +5,32 @@ var interval;
 //(the "both" variable will only allow the the if-loop to run once to avoid bugs)
 var both = 0;
 let moveBy = 1;
-var obstacle;
-var obstacle2;
-var obstacle3;
-var obstacle4;
-var obstacle5;
-var obstacle6;
-var obstacle7;
-var obstacle8;
-var obstacle9;
-var obstacle10;
+var door1;
+var door2;
+var door3;
+var door4;
+var door5;
+var door6;
+var door7;
+var door8;
+var door9;
+var door10;
+
 
 
 function startGame(){
    character;
    gameArea.start();
-   obstacle = new component(60, 120, "blue", 50, 120);
-   obstacle2 = new component(60, 120, "green", 150, 300);
-   obstacle3 = new component(60, 120, "orange", 450, 40);
-   obstacle4 = new component(60, 120, "purple", 600, 500);
-   obstacle5 = new component(60, 120, "magenta", 900, 70);
-   obstacle6 = new component(60, 120, "lightblue", 50, 650);
-   obstacle7 = new component(60, 120, "lightgreen", 350, 370);
-   obstacle8 = new component(60, 120, "aqua", 700, 200);
-   obstacle9 = new component(60, 120, "black", 810, 590);
-   obstacle10 = new component(60, 120, "brown", 400, 600);
+   door1 = new component(60, 120, "blue", 50, 120);
+   door2 = new component(60, 120, "green", 150, 300);
+   door3 = new component(60, 120, "orange", 450, 40);
+   door4 = new component(60, 120, "purple", 600, 500);
+   door5 = new component(60, 120, "magenta", 900, 70);
+   door6 = new component(60, 120, "lightblue", 50, 650);
+   door7 = new component(60, 120, "lightgreen", 350, 370);
+   door8 = new component(60, 120, "aqua", 700, 200);
+   door9 = new component(60, 120, "black", 810, 590);
+   door10 = new component(60, 120, "brown", 400, 600);
 
 }
 
@@ -137,13 +138,13 @@ function collisionDetection() {
    var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
    var top = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
    var characterCoordinate = [left, top];
-   var obstacleCoordinate = [obstacle.x, obstacle.y];
-   var minX = obstacleCoordinate[0];
-   var maxX = obstacleCoordinate[0] + obstacle.width;
-   var minY = obstacleCoordinate[1];
-   var maxY = obstacleCoordinate[1] + obstacle.height;
+   var door1Coordinate = [door1.x, door1.y];
+   var door1minX = door1Coordinate[0];
+   var door1maxX = door1Coordinate[0] + door1.width;
+   var door1minY = door1Coordinate[1];
+   var door1maxY = door1Coordinate[1] + door1.height;
    // acceptableObjectRange array: (min x, max x, min y, may y) - these four xy coordinates completely define the wall
-   acceptableObjectRange = [minX, maxX, minY, maxY];
+   door1Range = [door1minX, door1maxX, door1minY, door1maxY];
    /*if statement logic:
    - if the left characterCoordinate is farther right than the obstacle's minX 
    - if the characterCoordinate is farther left than the obstacle's maxX
@@ -153,24 +154,23 @@ function collisionDetection() {
    - ^these two statements imply the character is between the obstacle's min and may height
    - THEN, the picture is crashing into the obstacle, and it is oh no 
    */
-   if (characterCoordinate[0] >= acceptableObjectRange[0] && characterCoordinate[0] <= acceptableObjectRange[1] && characterCoordinate[1] >= acceptableObjectRange[2] && characterCoordinate[1] <= acceptableObjectRange[3]) {
-      alert("you have opened a door");
+   if (characterCoordinate[0] >= door1Range[0] && characterCoordinate[0] <= door1Range[1] && characterCoordinate[1] >= door1Range[2] && characterCoordinate[1] <= door1Range[3]) {
+      alert("you have opened a door 1. Please select the correct answer to the question below the game!");
       // call the function that displays the question when the character opens a door
-      displayQuestion();
+      displayQuestion1();
    }
 }
 
 // this function is called when the character enters a door
-function displayQuestion(){
+function displayQuestion1(){
    // variable to store the data of question. 2 sets of data: 4 radio inputs, 1 submit input. The 1 submit input calls the submitAnswer() function, which checks if the use selected the correct choice. Sidenote: This piece of code is sacred. 
-   var data="<input type='radio' name='choice' value='poor'>Donating to the Poor<br>  <input type='radio' name='choice' value='gender'>Fighting for Gender Equality<br>  <input type='radio' name='choice' value='leaders'>Developing Systems Change Leaders<br>  <input type='radio' name='choice' value='None of These'>None of These<br>      <input type='submit' value='Submit Answer' onclick='submitAnswer()'>";  
+   var data="<input type='radio' name='choice' value='poor'>Donating to the Poor<br>  <input type='radio' name='choice' value='gender'>Fighting for Gender Equality<br>  <input type='radio' name='choice' value='leaders'>Developing Systems Change Leaders<br>  <input type='radio' name='choice' value='None of These'>None of These<br>      <input type='submit' value='Submit Answer' onclick='submitAnswer1()'>";  
    document.getElementById('Question-1').innerHTML = "The three focuses of Engineers Without Borders Canada are: Transforming How Buisness is Done, Advocating for Better Policy, and _______."
    document.getElementById('Question-1-Options').innerHTML = data;  
    changeDoorColour();
 }
 
-var submitAnswer = function() {
-
+var submitAnswer1 = function() {
    var radios = document.getElementsByName('choice');
    var val= "";
    for (var i = 0, length = radios.length; i < length; i++) {
@@ -179,7 +179,7 @@ var submitAnswer = function() {
           break;
         }
    }
-   
+
    if (val == "" ) {
      alert("please select choice answer");
    } else if ( val == "leaders" ) {
@@ -189,12 +189,14 @@ var submitAnswer = function() {
    }
  };
 
+ // changes the color of the door to help users know which doors they already opened
  function changeDoorColour(){
-   obstacle = new component(60, 120, "red", 50, 120);
+   obstacle1 = new component(60, 120, "red", 50, 120);
 
 }
 
-
+// make a score function 
+// deduct scores or nah? this would be another function that deducts score if alert("Answer is wrong") is triggered
 
 
 
