@@ -1,0 +1,239 @@
+canvas{
+   border: 1px solid blue;
+   background-color: aliceblue;
+}
+
+/*
+*{
+   padding: 0;
+   margin: 0;
+}
+#game{
+   width: 1020px;
+   height: 700px;
+   top: 40px;
+   border: 15px solid black;
+}
+*/
+
+/* horizontal walls 
+.wall1{
+   position: absolute;
+   width: 1041px;
+   height: 20px;
+   background-color: green;
+   top: 120px;
+}
+.wall2{
+   position: absolute;
+   width: 1041px;
+   height: 20px;
+   background-color: black;
+   top: 240px;
+}
+.wall3{
+   position: absolute;
+   width: 1041px;
+   height: 20px;
+   background-color: black;
+   top: 360px;
+}
+.wall5{
+   position: absolute;
+   width: 1041px;
+   height: 20px;
+   background-color: black;
+   top: 480px;
+}
+.wall6{
+   position: absolute;
+   width: 1041px;
+   height: 20px;
+   background-color: black;
+   top: 600px;
+}
+vertical walls
+.wall7{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 130px;
+}
+.wall8{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 260px;
+}
+.wall9{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 390px;
+}
+.wall10{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 520px;
+}
+.wall11{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 650px;
+}
+.wall12{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 780px;
+}
+.wall13{
+   position: absolute;
+   width: 20px; 
+   height: 721px; 
+   background-color: black;
+   top: 0px;
+   left: 910px;
+}
+ holes 
+.hole1{
+   position: absolute;
+   width: 20px; 
+   height: 105px; 
+   background-color: white;
+   top: 15px;
+   left: 130px;
+}
+.hole2{
+   position: absolute;
+   width: 110px; 
+   height: 20px; 
+   background-color: white;
+   top: 120px;
+   left: 150px;
+}
+.hole3{
+   position: absolute;
+   width: 110px; 
+   height: 20px; 
+   background-color: white;
+   top: 240px;
+   left: 150px;
+}
+.hole4{
+   position: absolute;
+   width: 110px; 
+   height: 20px; 
+   background-color: white;
+   top: 360px;
+   left: 150px;
+}
+.hole5{
+   position: absolute;
+   width: 20px; 
+   height: 100px; 
+   background-color: white;
+   top: 380px;
+   left: 260px;
+}
+.hole6{
+   position: absolute;
+   width: 20px; 
+   height: 100px; 
+   background-color: white;
+   top: 380px;
+   left: 390px;
+}
+.hole7{
+   position: absolute;
+   width: 20px; 
+   height: 100px; 
+   background-color: white;
+   top: 380px;
+   left: 520px;
+}
+.hole8{
+   position: absolute;
+   width: 110px;
+   height: 20px;
+   left: 150px;
+   top: 480px;
+   background-color: white;
+}
+.hole9{
+   position: absolute;
+   width: 20px;
+   height: 100px;
+   left: 130px;
+   top: 500px;
+   background-color: white;
+}
+.hole10{
+   position: absolute;
+   width: 115px;
+   height: 20px;
+   left: 15px;
+   top: 600px;
+   background-color: white;
+}
+.hole11{
+   position: absolute;
+   width: 20px;
+   height: 95px;
+   left: 130px;
+   top: 620px;
+   background-color: white;
+}
+.hole12{
+   position: absolute;
+   width: 20px;
+   height: 95px;
+   left: 260px;
+   top: 620px;
+   background-color: white;
+}
+.hole13{
+   position: absolute;
+   width: 110px;
+   height: 20px;
+   left: 280px;
+   top: 600px;
+   background-color: white;
+}
+.hole14{
+   position: absolute;
+   width: 20px;
+   height: 100px;
+   left: 130px;
+   top: 380px;
+   background-color: white;
+}
+.hole15{
+   position: absolute;
+   width: 115px;
+   height: 20px;
+   left: 15px;
+   top: 360px;
+   background-color: white;
+}
+
+p1{
+   font-size: 24px;
+   font-weight: bold;
+}
+
+*/
