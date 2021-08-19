@@ -16,8 +16,6 @@ var door8;
 var door9;
 var door10;
 
-
-
 function startGame(){
    character;
    gameArea.start();
@@ -535,7 +533,7 @@ function submitAnswer10(){
 
 
 
-/* pseudocode 
+/* 
 Next Steps: 
 - activate the questions when the door is opened 
 - instead of alert function, call the function that displays the html text
