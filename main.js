@@ -519,20 +519,6 @@ function submitAnswer10(){
    }
 }
 
-
-
-// make a score function 
-// deduct scores or nah? this would be another function that deducts score if alert("Answer is wrong") is triggered
-
-
-
-
-
-
-
-
-
-
 /* 
 Next Steps: 
 - activate the questions when the door is opened 
@@ -542,11 +528,5 @@ Next Steps:
 - pause the game while answering (or make a html pop up that tells the user to answer the question before returning to the game
 - keep track of which doors have been opened (score: increase when door open)
 - change color of door when opened
-- done
-
-
-
-- there is a bug with the character getting stuck in the door... fix this
-
 */
 
